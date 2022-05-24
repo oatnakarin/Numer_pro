@@ -1,0 +1,32 @@
+name: REACT CI
+
+
+on:
+  push:
+    branches:
+      - "master"
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        node-version: [15.x]
+
+    steps:
+      - uses: actions/checkout@v1
+
+      - name: npm install
+        working-directory: ./nmain
+        run : npm install
+
+      - name: npm run build
+        working-directory: ./nmain
+        run : npm run build
+
+      - name: npm test
+        working-directory: ./nmain
+        run : npm test
+      
+      - name: Start containers(Deploy)
+        run: docker-compose up -d
