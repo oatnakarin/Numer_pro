@@ -207,7 +207,7 @@ function Guess_elimination() {
 
   return (
   <div>
-    <div style={{textAlign:'center',fontSize:'20px',fontWeight:'bold'}}>Guess-EliminationXDXD</div>
+    <div style={{textAlign:'center',fontSize:'20px',fontWeight:'bold'}}>Guess-Elimination</div>
       <div style={{marginLeft:'150px'}}>
       <div style={{width:'150px'}}>
             <Select
