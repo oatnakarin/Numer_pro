@@ -19,8 +19,8 @@ test('input value is updated correctly', () => {
 
   const {input} = setup()
   console.log(input)
-  fireEvent.change(input, {target: {value: '23'}})
-  expect(input.value).toBe('$23')
+  fireEvent.change(input, {target: {value: '234'}})
+  expect(input.value).toBe('$234')
   
 });
 
