@@ -1,6 +1,5 @@
 name: REACT CI
 
-
 on:
   push:
     branches:

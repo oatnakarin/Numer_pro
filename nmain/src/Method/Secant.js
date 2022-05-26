@@ -200,7 +200,7 @@ const Secant = () => {
             </div>
           <div style={{border: '1px solid black',width:'400px',height:'400px',padding:'20px'}}>
             <div >
-                <h3>Math Equation</h3>
+                <h3>Math EquationX</h3>
                   <EditableMathField style={{width:'250px'}}
                   latex={latex}
                   onChange={(mathField) => {
