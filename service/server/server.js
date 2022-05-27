@@ -171,9 +171,6 @@ app.use('/api-docs',swaggerUi.serve,swaggerUi.setup(swaggerDocs));
  *              description: token is not valid
  */
 
-
-
-
     const verify = (req,res,next) =>{
         try{
             const token = req.params.token;
@@ -188,6 +185,14 @@ app.use('/api-docs',swaggerUi.serve,swaggerUi.setup(swaggerDocs));
             res.status(401)
         }
     }
+
+app.get('/testapi/:token',verify,function (req,res){
+    try {
+        res.send("Can access api");
+    } catch (err) {
+        res.send(err);
+    }
+})
 
 app.get('/data/:token',verify,function (req, res) {
     try {

@@ -72,7 +72,7 @@ const Secant = () => {
             obj2.FX0 = fx0
             let fx1 = fun(x1).toFixed(6)
             obj2.FX1 = fx1
-            let x = x0 - (fx0*(x0-x1).toFixed(6)/(fx0-fx1))
+            let x = x0 - (fx0*(x0-x1)/(fx0-fx1))
             if(isNaN(x) || x===Infinity){
               alert("Cannot calculate this equation!")
               return;
