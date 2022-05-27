@@ -20,7 +20,7 @@ test('TestBisectionMethod', () => {
   const {input} = setup()
  // console.log(input)
   fireEvent.change(input, {target:{value:['x^4-13','1.5','2']}})
-  expect(input.value).toBe('1.898829')
+  expect(input.value).toBe('1.89882988')
   
 });
 
