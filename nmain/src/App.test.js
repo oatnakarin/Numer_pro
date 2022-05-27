@@ -1,15 +1,15 @@
 import { render, screen } from '@testing-library/react';
 import App from './App';
 import {fireEvent} from '@testing-library/react'
-import CostInput from './test_method';
+import BisecTest from './test_method';
 
 test('renders learn react link', () => {
   render(<App />);
 })
 
-test('input value is updated correctly', () => {
+test('TestBisectionMethod', () => {
   const setup = () => {
-    const utils = render(<CostInput />)
+    const utils = render(<BisecTest />)
     const input = screen.getByLabelText('cost-input')
     return {
       input,
@@ -18,9 +18,9 @@ test('input value is updated correctly', () => {
   }
 
   const {input} = setup()
-  console.log(input)
-  fireEvent.change(input, {target: {value: '234'}})
-  expect(input.value).toBe('$234')
+ // console.log(input)
+  fireEvent.change(input, {target:{value:['x^4-13','1.5','2']}})
+  expect(input.value).toBe('1.898829')
   
 });
 
